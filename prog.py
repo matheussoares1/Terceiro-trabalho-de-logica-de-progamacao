@@ -1,9 +1,17 @@
 import os
-nome = "NÃO ENCONTRADO"
+nome = "NÃO ENCONTRADO" 
 datanasc = "NÃO ENCONTRADO"
 cpf = "NÃO ENCONTRADO"
 idade = "NÃO ENCONTRADO"
 filiado = "NÃO ENCONTRADO"
+
+nome = []
+datanasc = []
+cpf = []
+idade = []
+filiado = []
+
+arqv2 = open('teste.txt')
 
 
 i = 0
@@ -124,13 +132,10 @@ while i != "5":
        print("Processo Encerrado")
        #NÃO CONSEGUIMOS IMPLEMENTAR A ESCOLHA DE CONFIRMAÇÃO
        
-arqv2.write()
-
-arqv2.append(nome)
-arqv2.append(cpf)
-arqv2.append(datanasc) 
-arqv2.append(idade) 
-arqv2.append(filiado)  
-
+arqv2.write(nome)
+arqv2.write(cpf)
+arqv2.write(datanasc) 
+arqv2.write(idade) 
+arqv2.write(filiado)  
 
 arqv2.close()
