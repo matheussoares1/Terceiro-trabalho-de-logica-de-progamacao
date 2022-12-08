@@ -1,4 +1,10 @@
 import os
+nome = "NÃO ENCONTRADO"
+datanasc = "NÃO ENCONTRADO"
+cpf = "NÃO ENCONTRADO"
+idade = "NÃO ENCONTRADO"
+filiado = "NÃO ENCONTRADO"
+
 
 i = 0
 while i != "5":
@@ -34,13 +40,13 @@ while i != "5":
                 cont=0
         #i=i-1
     if i == "2":
-        if nome == "Não cadastrado" and cpf == "Não cadastrado" and anonascimento == "Não cadastrado" and idade == "Não cadastrado" and filiado == "Não cadastrado":
+        if nome == "Não cadastrado" and cpf == "Não cadastrado" and datanasc == "Não cadastrado" and idade == "Não cadastrado" and filiado == "Não cadastrado":
             print("Nenhum dado foi cadastrado")
         else:
             print("\nCONSULTAR CADASTRO")
             print("Nome Completo: ", nome)
             print("CPF: ", cpf)
-            print("Ano de Nascimento: ", anonascimento)
+            print("Ano de Nascimento: ", datanasc)
             print("Idade: ", idade)
             print("Filiado: ", filiado)
             i2 = input("Clique enter para retornar ao INICIO")
@@ -48,7 +54,7 @@ while i != "5":
         print("\nDELETAR DADOS")
         print("1- Nome Completo: ", nome)
         print("2- CPF: ", cpf)
-        print("3- Ano De nascimento: ", anonascimento)
+        print("3- Ano De nascimento: ", datanasc)
         print("4- Idade: ", idade)
         print("5- Filiado: ", filiado)
         print("6- Deletar todos os dados")
@@ -71,20 +77,20 @@ while i != "5":
         elif i2 == "6":
             nome = "Não cadastrado"
             cpf = "Não cadastrado"
-            anonascimento = "Não cadastrado"
+            datanasc = "Não cadastrado"
             idade = "Não cadastrado"
             filiado = "Não cadastrado"
             print("Todos os dados foram deletados!")
         else:
             print("Opção inválida")
     if i =="4":
-        if nome == "Não cadastrado" and cpf == "Não cadastrado" and anonascimento == "Não cadastrado" and idade == "Não cadastrado" and filiado == "Não cadastrado":
+        if nome == "Não cadastrado" and cpf == "Não cadastrado" and datanasc == "Não cadastrado" and idade == "Não cadastrado" and filiado == "Não cadastrado":
             print("Nenhum dado foi cadastrado")
         else:
             print("\nATUALIZAR DADOS")
             print("1- Nome Completo: ", nome)
             print("2- CPF: ", cpf)
-            print("3- Ano de Nascimento: ", anonascimento)
+            print("3- Ano de Nascimento: ", datanasc)
             print("4- Idade Atual: ", idade)
             print("5- Filiado: ", filiado)
             print("6- Atualizar dados novamente")
@@ -97,7 +103,7 @@ while i != "5":
                 cpf.append(input("cpf: "))
                 print("\nCPF atualizado com sucesso\n\n")
             elif i2 == "3":
-                anonascimento.append( input("anonascimento: "))
+                datanasc.append( input("anonascimento: "))
                 print("\nAno de Nascimento Atualizado com sucesso\n\n")
             elif i2 == "4":
                 idade.append(input("idade: "))
@@ -108,7 +114,7 @@ while i != "5":
             elif i2 == "6":
                 nome.append(input("Nome Completo: "))
                 cpf.append(input("CPF: "))
-                anonascimento.append(input("Ano de Nascimento: "))
+                datanasc.append(input("Ano de Nascimento: "))
                 idade.append(input("Idade: "))
                 filiado.append(input("Filiado: "))
                 print("\nDados de Pessoa Fisica Atualizados com Sucesso!\n\n")
@@ -117,11 +123,14 @@ while i != "5":
     if i =="5":
        print("Processo Encerrado")
        #NÃO CONSEGUIMOS IMPLEMENTAR A ESCOLHA DE CONFIRMAÇÃO
+       
+arqv2.write()
 
-arqv2.write(nome) 
+arqv2.append(nome)
 arqv2.append(cpf)
-arqv2.append(anonascimento) 
+arqv2.append(datanasc) 
 arqv2.append(idade) 
 arqv2.append(filiado)  
+
 
 arqv2.close()
